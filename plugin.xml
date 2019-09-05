@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin id="cordova-plugin-hotspot-connect" version="0.1.0" xmlns="http://apache.org/cordova/ns/plugins/1.0">
+  <name>cordova-plugin-hotspot-connect</name>
+  <js-module name="HotspotConnect" src="www/HotspotConnect.js">
+    <clobbers target="cordova.plugins.HotspotConnect" />
+  </js-module>
+  <platform name="ios">
+    <config-file parent="/*" target="config.xml">
+      <feature name="HotspotConnect">
+        <param name="ios-package" value="HotspotConnect" />
+        <param name="onload" value="true" />
+      </feature>
+    </config-file>
+    <config-file parent="com.apple.developer.networking.HotspotConfiguration" target="*/Entitlements-Debug.plist">
+      <true/>
+    </config-file>
+    <config-file parent="com.apple.developer.networking.HotspotConfiguration" target="*/Entitlements-Release.plist">
+      <true/>
+    </config-file>
+    <config-file parent="com.apple.developer.networking.wifi-info" target="*/Entitlements-Debug.plist">
+      <true/>
+    </config-file>
+    <config-file parent="com.apple.developer.networking.wifi-info" target="*/Entitlements-Release.plist">
+      <true/>
+    </config-file>
+    <header-file src="src/ios/HotspotConnect-Bridging-Header.h"/>
+    <source-file src="src/ios/HotspotConnect.swift" />
+    <dependency id="es6-promise-plugin" version="4.1.0" />
+    <dependency id="cordova-plugin-add-swift-support" url="https://github.com/akofman/cordova-plugin-add-swift-support"/>
+  </platform>
+</plugin>

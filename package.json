@@ -1,0 +1,17 @@
+{
+  "name": "cordova-plugin-hotspot-connect",
+  "version": "0.1.0-dev",
+  "description": "Cordova Hotspot Connect Plugin",
+  "cordova": {
+    "id": "cordova-plugin-hotspot-connect",
+    "platforms": [
+      "ios"
+    ]
+  },
+  "keywords": [
+    "cordova",
+    "ecosystem:cordova",
+    "cordova-ios"
+  ],
+  "author": "Hubert Pietrusiak"
+}
